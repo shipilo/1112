@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Reflection;
 
 namespace Met_1112
 {
-
-    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor)]
     public class DeveloperInfoAttribute : Attribute
     {
-        public DeveloperInfoAttribute(string developer)
+        public string Developer;
+        public string DateOfRelease;
+
+        public DeveloperInfoAttribute(string developer, string dateOfRelease)
         {
-            // ???
+            Developer = developer;
+            DateOfRelease = dateOfRelease;
         }
     }
 }

@@ -1,12 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace Met_1112
 {
-	class BankAccount
+    class BankAccount
 	{
 		private int index;
 
-		static int indexer = 0;		
+		static int indexer = 0;
 
 		public BankAccount()
 		{
@@ -15,8 +16,8 @@ namespace Met_1112
 
 		[Conditional("DEBUGGING")]
 		public void DumpToScreen()
-        {
-			// а что делать собственно?
-        }
+		{
+			Console.WriteLine($"Индекс счёта: {index}");
+		}
 	}
 }

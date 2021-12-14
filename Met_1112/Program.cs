@@ -45,7 +45,14 @@ namespace Met_1112
             counter.count += handler.Message;
             counter.Count();
 
+            // использование атрибутов
+            Rational rational = new Rational();
+            Type typeInfo = typeof(Rational);
+            object[] attrs = typeInfo.GetCustomAttributes(false);            
+            Console.WriteLine((attrs[0] as DeveloperInfoAttribute).DateOfRelease);
 
+            BankAccount bankAccount = new BankAccount();
+            bankAccount.DumpToScreen();
 
             Console.ReadLine();
         }
