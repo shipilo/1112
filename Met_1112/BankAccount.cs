@@ -14,7 +14,7 @@ namespace Met_1112
 			index = indexer++;
 		}
 
-		[Conditional("DEBUGGING")]
+        [Conditional("DEBUG")]
 		public void DumpToScreen()
 		{
 			Console.WriteLine($"Индекс счёта: {index}");
